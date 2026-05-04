@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Niharika Joshi – Front-End Developer & UI/UX Designer. Beautiful, high-performance web experiences.">
+    <title>Niharikajoshi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- ── TOAST NOTIFICATION ── -->
+    <div id="toast" class="toast" role="alert" aria-live="polite">
+        <i id="toast-icon" class="fa-solid fa-circle-check"></i>
+        <span id="toast-msg">Message sent successfully!</span>
+    </div>
+
+    <!-- ── NAV BAR ── -->
+    <nav class="nav">
+        <div class="logo">
+            <div class="icon"><a href="#home"><i class="fa-solid fa-code"></i></a></div>
+            <a href="#home">niharika.dev</a>
+        </div>
+        <div class="address">
+            <div><button><a href="#home"><i class="fa-regular fa-house"></i>Home</a></button></div>
+            <div><button><a href="#about"><i class="fa-regular fa-user"></i>About</a></button></div>
+            <div><button><a href="#skills"><i class="fa-solid fa-terminal"></i>Skills</a></button></div>
+            <div><button><a href="#projects"><i class="fa-solid fa-suitcase"></i>Project</a></button></div>
+            <div><button><a href="#contact"><i class="fa-regular fa-envelope"></i>Contact</a></button></div>
+        </div>
+    </nav>
+
+    <!-- ── HERO SECTION ── -->
+    <section class="hero" id="home">
+
+        <!-- animated background blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <!-- floating particles -->
+        <div class="particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+
+        <div class="hero-content">
+            <!-- Left / Text side -->
+            <div class="hero-text">
+                <p class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    Hello, I'm
+                </p>
+
+                <h1 class="hero-name">
+                    Niharika<br>
+                    <span class="hero-name-highlight">Joshi</span>
+                </h1>
+
+                <div class="hero-role">
+                    <span class="role-prefix">&lt;</span>
+                    <span class="role-text" id="role-text">Front-End Developer</span>
+                    <span class="role-cursor">|</span>
+                    <span class="role-suffix">/&gt;</span>
+                </div>
+
+                <p class="hero-description">
+                   I’m a frontend developer and creative editor, passionate about building aesthetic, responsive websites and creative videos.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-regular fa-envelope"></i> Hire Me
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/niharikajoshi-dev" target="_blank"  aria-label="GitHub" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/niharika-joshi-a72ba4325" target="_blank" aria-label="LinkedIn" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Right / Avatar side -->
+            <div class="hero-avatar-wrapper">
+                <div class="avatar-ring ring-outer"></div>
+                <div class="avatar-ring ring-inner"></div>
+                <div class="avatar-glow"></div>
+                <div class="avatar-circle">
+                    <span class="avatar-initials">NJ</span>
+                </div>
+
+                <!-- floating skill badges (orbital) -->
+                <div class="badge-orbiter" style="animation-delay: 0s;">
+                    <div class="badge badge-html"><i class="fa-brands fa-html5"></i> HTML5</div>
+                </div>
+                <div class="badge-orbiter" style="animation-delay: -3s;">
+                    <div class="badge badge-css"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                </div>
+                <div class="badge-orbiter" style="animation-delay: -6s;">
+                    <div class="badge badge-js"><i class="fa-brands fa-js"></i> JS</div>
+                </div>
+                <div class="badge-orbiter" style="animation-delay: -9s;">
+                    <div class="badge badge-react"><i class="fa-brands fa-react"></i> React</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- scroll indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT SECTION ── -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-tag">&lt; about /&gt;</span>
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <p class="section-sub">A little story about who I am</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image-col">
+                <div class="about-img-wrapper">
+                    <img src="WhatsApp Image 2026-05-03 at 9.51.13 PM.jpeg" alt="Niharika Joshi" class="about-photo">
+                    <div class="about-img-border"></div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text-col">
+                <h3 class="about-heading">I build things for the <span class="highlight">web</span></h3>
+                <p class="about-para">
+                    Hi! I'm <strong>Niharika Joshi</strong>, a passionate Front-End Developer
+                    and UI/UX designer who loves creating beautiful and responsive web applications.
+                    I focus on writing clean, efficient code and delivering pixel-perfect designs.
+                </p>
+                <p class="about-para">
+                    When I'm not coding, you'll find me exploring new design trends, contributing
+                    to open-source projects, or learning the latest web technologies.
+                </p>
+                <div class="about-info-grid">
+                    <div class="info-item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span><strong>DOB:</strong> dec 19, 2006</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span><strong>From:</strong> India</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span><strong>Email:</strong> joshiniharika197@email.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span><strong>Study:</strong> B.Tech CSE</span>
+                    </div>
+                </div>
+                <a href="Niharika_Joshi_cv.pdf" class="btn btn-primary" id="download-cv">
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SKILLS SECTION ── -->
+    <section class="skills" id="skills">
+        <div class="section-header">
+            <span class="section-tag">&lt; skills /&gt;</span>
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <p class="section-sub">Technologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Skill card -->
+            <div class="skill-card">
+                <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="95"></div></div>
+                <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <span class="skill-name">CSS</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="90"></div></div>
+                <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div>
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="40"></div></div>
+                <span class="skill-pct">40%</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon git-icon"><i class="fa-brands fa-git-alt"></i></div>
+                <span class="skill-name">Git</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="85"></div></div>
+                <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon figma-icon"><i class="fa-brands fa-figma"></i></div>
+                <span class="skill-name">Figma</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="78"></div></div>
+                <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon python-icon"><i class="fa-brands fa-python"></i></div>
+                <span class="skill-name">Python</span>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-pct="70"></div></div>
+                <span class="skill-pct">70%</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS SECTION ── -->
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <span class="section-tag">&lt; projects /&gt;</span>
+            <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+            <p class="section-sub">A selection of things I've built</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-img" style="background: linear-gradient(135deg,#8B5CF6,#4286f4)">
+                    <i class="fa-solid fa-cart-shopping project-mock-icon"></i>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span>
+                    </div>
+                    <h3 class="project-title">E-Commerce UI</h3>
+                    <p class="project-desc">A modern, fully responsive shopping interface with cart, filters, and smooth animations.</p>
+                    <div class="project-links">
+                        <a href="#" class="plink"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="plink plink-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-img" style="background: linear-gradient(135deg,#EC4899,#8B5CF6)">
+                    <i class="fa-solid fa-palette project-mock-icon"></i>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="ptag">React</span><span class="ptag">CSS</span>
+                    </div>
+                    <h3 class="project-title">Design Portfolio</h3>
+                    <p class="project-desc">A creative portfolio showcasing UI/UX work with scroll-triggered animations and glassmorphism cards.</p>
+                    <div class="project-links">
+                        <a href="#" class="plink"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="plink plink-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-img" style="background: linear-gradient(135deg,#4286f4,#06B6D4)">
+                    <i class="fa-solid fa-cloud-sun project-mock-icon"></i>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="ptag">JS</span><span class="ptag">API</span><span class="ptag">CSS</span>
+                    </div>
+                    <h3 class="project-title">Weather App</h3>
+                    <p class="project-desc">Real-time weather dashboard using the OpenWeather API with beautiful animated weather icons.</p>
+                    <div class="project-links">
+                        <a href="#" class="plink"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="plink plink-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-img" style="background: linear-gradient(135deg,#10B981,#4286f4)">
+                    <i class="fa-solid fa-list-check project-mock-icon"></i>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span>
+                    </div>
+                    <h3 class="project-title">Task Manager</h3>
+                    <p class="project-desc">A productivity app with drag-and-drop tasks, local storage, and priority tagging.</p>
+                    <div class="project-links">
+                        <a href="#" class="plink"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="plink plink-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">&lt; contact /&gt;</span>
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <p class="section-sub">I'd love to hear from you</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3 class="contact-heading">Let's work together</h3>
+                <p class="contact-para">Have a project in mind? Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">joshiniharika197@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">India</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">www.linkedin.com/in/niharika-joshi-a72ba4325</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Niharika Joshi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="hello@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                    <span id="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                    <span id="btn-loading" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending…</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <div class="icon"><i class="fa-solid fa-code"></i></div>
+                niharika.dev
+            </div>
+            <p class="footer-copy">© 2026 Niharika Joshi. Crafted with <i class="fa-solid fa-heart" style="color:#8B5CF6"></i> and lots of CSS.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typewriter effect for role text
+        const roles = [
+            "Front‑End Developer",
+            "UI / UX Designer",
+            
+            "TECH Enthusiast"
+        ];
+        let roleIdx = 0, charIdx = 0, deleting = false;
+        const roleEl = document.getElementById("role-text");
+
+        function typeRole() {
+            const current = roles[roleIdx];
+            if (!deleting) {
+                roleEl.textContent = current.slice(0, ++charIdx);
+                if (charIdx === current.length) { deleting = true; return setTimeout(typeRole, 1800); }
+            } else {
+                roleEl.textContent = current.slice(0, --charIdx);
+                if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; }
+            }
+            setTimeout(typeRole, deleting ? 55 : 90);
+        }
+        typeRole();
+
+        // ── Skill bar fill animation ──
+        const skillBars = document.querySelectorAll('.skill-bar');
+        const skillsSection = document.querySelector('.skills');
+
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    skillBars.forEach(bar => {
+                        const pct = bar.getAttribute('data-pct');
+                        bar.style.width = pct + '%';
+                    });
+                    barObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        barObserver.observe(skillsSection);
+
+        // ── EmailJS Contact Form ──
+        // 1. Sign up free at https://www.emailjs.com
+        // 2. Create an Email Service (Gmail recommended)
+        // 3. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+        // 4. Replace the three placeholders below with your actual IDs
+        emailjs.init("KbskKm6zPotVlNrxN");          // ← Account → API Keys → Public Key
+
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn   = document.getElementById('submit-btn');
+        const btnText     = document.getElementById('btn-text');
+        const btnLoading  = document.getElementById('btn-loading');
+
+        function showToast(msg, isError = false) {
+            const toast   = document.getElementById('toast');
+            const toastMsg  = document.getElementById('toast-msg');
+            const toastIcon = document.getElementById('toast-icon');
+            toastMsg.textContent = msg;
+            toastIcon.className  = isError
+                ? 'fa-solid fa-circle-exclamation'
+                : 'fa-solid fa-circle-check';
+            toast.className = 'toast show' + (isError ? ' toast-error' : '');
+            setTimeout(() => { toast.className = 'toast'; }, 4000);
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display    = 'none';
+            btnLoading.style.display = 'inline-flex';
+
+            const templateParams = {
+                from_name:  document.getElementById('name').value.trim(),
+                from_email: document.getElementById('email').value.trim(),
+                subject:    document.getElementById('subject').value.trim(),
+                message:    document.getElementById('message').value.trim(),
+            };
+
+            emailjs.send(
+                "service_h4fhhrb",    // ← Email Services → Service ID
+                "template_0q2sye6",   // ← Email Templates → Template ID
+                templateParams
+            ).then(() => {
+                showToast('✅ Message sent! I\'ll get back to you soon.');
+                contactForm.reset();
+            }).catch((err) => {
+                console.error('EmailJS error:', err);
+                showToast('Something went wrong. Please try again.', true);
+            }).finally(() => {
+                submitBtn.disabled = false;
+                btnText.style.display    = 'inline-flex';
+                btnLoading.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
