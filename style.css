@@ -372,7 +372,7 @@ body {
 .hero-socials {
     display: flex;
     gap: 14px;
-    margin-left: 65px;
+    
 }
 
 .social-link {
@@ -582,8 +582,10 @@ body {
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — HERO SECTION
    ============================================================ */
+
+/* ── Tablet & below (≤ 900px) ── */
 @media (max-width: 900px) {
     .hero-content {
         flex-direction: column-reverse;
@@ -592,28 +594,70 @@ body {
         gap: 40px;
     }
 
-    .hero-greeting { justify-content: center; }
-    .hero-cta      { justify-content: center; }
-    .hero-socials  { justify-content: center; }
+    .hero-greeting  { justify-content: center; }
+    .hero-cta       { justify-content: center; }
+    .hero-socials   { justify-content: center; margin-left: 0; }
     .hero-description { max-width: 100%; }
 
-    .hero-avatar-wrapper { width: 260px; height: 260px; }
-    .ring-outer { width: 256px; height: 256px; }
-    .ring-inner { width: 214px; height: 214px; }
-    .avatar-circle { width: 155px; height: 155px; }
-    .avatar-initials { font-size: 2.4rem; }
+    /* Avatar — scale down for tablet */
+    .hero-avatar-wrapper { width: 280px; height: 280px; }
+    .ring-outer  { width: 272px; height: 272px; }
+    .ring-inner  { width: 224px; height: 224px; }
+    .avatar-glow { width: 175px; height: 175px; }
+    .avatar-circle   { width: 160px; height: 160px; }
+    .avatar-initials { font-size: 2.6rem; }
 
-    .badge-html  { left: -10px; }
-    .badge-css   { right: -10px; }
-    .badge-js    { left: -10px; }
-    .badge-react { right: -10px; }
+    /* Orbital badge radius matches new ring-outer (136px) */
+    .badge { left: 136px; }
 }
 
+/* ── Small mobile (≤ 600px) ── */
 @media (max-width: 600px) {
     .nav  { padding: 14px 20px; }
-    .hero { padding: 40px 20px 80px; }
-    .hero-name { font-size: 2.4rem; }
-    .address button { width: 70px; font-size: 0.75rem; }
+    .hero { padding: 40px 20px 90px; }
+
+    .hero-name { font-size: clamp(2rem, 9vw, 2.8rem); }
+    .hero-role { font-size: 1rem; }
+    .hero-description { font-size: 0.92rem; }
+
+    .address button { padding: 5px 10px; font-size: 0.75rem; }
+
+    /* Avatar — further scale down for mobile */
+    .hero-avatar-wrapper { width: 240px; height: 240px; }
+    .ring-outer  { width: 236px; height: 236px; }
+    .ring-inner  { width: 194px; height: 194px; }
+    .avatar-glow { width: 150px; height: 150px; }
+    .avatar-circle   { width: 138px; height: 138px; }
+    .avatar-initials { font-size: 2.2rem; }
+
+    /* Orbital badge radius matches new ring-outer (118px) */
+    .badge { left: 118px; padding: 4px 10px; font-size: 0.68rem; }
+
+    /* Slow orbit for performance on mobile */
+    .badge-orbiter { animation-duration: 16s; }
+    .badge         { animation-duration: 16s; }
+}
+
+/* ── Extra-small phones (≤ 400px) ── */
+@media (max-width: 400px) {
+    .hero { padding: 30px 16px 80px; }
+
+    .hero-name { font-size: 2rem; }
+    .hero-role { font-size: 0.9rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn { padding: 10px 20px; font-size: 0.85rem; }
+
+    /* Avatar — smallest footprint */
+    .hero-avatar-wrapper { width: 200px; height: 200px; }
+    .ring-outer  { width: 196px; height: 196px; }
+    .ring-inner  { width: 162px; height: 162px; }
+    .avatar-glow { width: 124px; height: 124px; }
+    .avatar-circle   { width: 112px; height: 112px; }
+    .avatar-initials { font-size: 1.8rem; }
+
+    /* Orbital badge radius matches new ring-outer (98px) */
+    .badge { left: 98px; padding: 3px 8px; font-size: 0.62rem; gap: 4px; }
+    .badge i { font-size: 0.75rem; }
 }
 
 /* ============================================================
@@ -893,6 +937,7 @@ section {
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s;
+   
 }
 
 .project-card:hover {
@@ -906,6 +951,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .project-mock-icon {
@@ -1050,6 +1103,17 @@ section {
     font-size: 0.9rem;
     color: var(--text-primary);
     font-weight: 500;
+}
+
+.contact-value a{
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.contact-value a:hover{
+    color: var(--purple-light);
 }
 
 /* Contact Form */
